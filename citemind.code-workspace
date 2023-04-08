@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#0e7a56",
+      "titleBar.activeForeground": "#ffffff",
+      "titleBar.inactiveBackground": "#311609",
+      "titleBar.inactiveForeground": "#ffffff"
+    },
+    "workbench.colorTheme": "Dobri Next -C09- Eve"
+  }
+}
