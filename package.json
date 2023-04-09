@@ -32,7 +32,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "npx crlf --set=LF node_modules/.bin/jira-prepare-commit-msg; gh-pages -d build",
     "fbdeploy": "firebase deploy --only firestore:rules",
     "go": "yarn deploy; git add .; git  commit -m 'Updated'; git push"
   },
