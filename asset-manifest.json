@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/citemind/static/css/main.83f546e1.css",
+    "main.js": "/citemind/static/js/main.29386e57.js",
+    "static/js/845.a3b376c2.chunk.js": "/citemind/static/js/845.a3b376c2.chunk.js",
+    "static/js/787.dfceed6c.chunk.js": "/citemind/static/js/787.dfceed6c.chunk.js",
+    "static/media/load.mp3": "/citemind/static/media/load.f93aafb15a6678f6bdd6.mp3",
+    "static/media/mindmap.png": "/citemind/static/media/mindmap.4c26580c0ba23bc3e5c2.png",
+    "index.html": "/citemind/index.html",
+    "main.83f546e1.css.map": "/citemind/static/css/main.83f546e1.css.map",
+    "main.29386e57.js.map": "/citemind/static/js/main.29386e57.js.map",
+    "845.a3b376c2.chunk.js.map": "/citemind/static/js/845.a3b376c2.chunk.js.map",
+    "787.dfceed6c.chunk.js.map": "/citemind/static/js/787.dfceed6c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.83f546e1.css",
+    "static/js/main.29386e57.js"
+  ]
+}
