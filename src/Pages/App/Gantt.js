@@ -6,6 +6,7 @@ import { Heading } from "@instructure/ui-heading";
 import { Flex, FlexItem } from "@instructure/ui-flex";
 import { Button, IconButton } from "@instructure/ui-buttons";
 import { DateTime } from "luxon";
+import MindMap from "../../Components/MindMap/App";
 
 import useWindowSize from "../../Hooks/useWindowSize";
 
@@ -131,98 +132,9 @@ export default function Gantt(props) {
 
   return (
     <Flex direction="column" height="100%">
-      <FlexItem padding="small">
-        <Flex justifyItems="space-between">
-          <FlexItem>
-            <Heading level="h2">Heading</Heading>
-          </FlexItem>
-          <FlexItem>
-            <Flex justifyItems="space-around">
-              <FlexItem>
-                <Button
-                  margin="xx-small"
-                  onClick={() => {
-                    // Save the tasks
-                    dbApp
-                      .updateSubmissionTasks(submissionId, tasks)
-                      .then((response) => {
-                        console.log(response);
-                      })
-                      .catch((error) => {
-                        console.log(error);
-                      });
-                  }}
-                >
-                  Save
-                </Button>
-              </FlexItem>
-              <FlexItem>
-                <Button
-                  margin="xx-small"
-                  onClick={() => {
-                    navigate(-1);
-                  }}
-                >
-                  Back
-                </Button>
-              </FlexItem>
-            </Flex>
-          </FlexItem>
-        </Flex>
-      </FlexItem>
-      <FlexItem>
-        <Flex justifyItems="space-between">
-          <FlexItem justifyItems="start" margin="xx-small">
-            <Button
-              onClick={() => {
-                setTasks([
-                  ...tasks,
-                  {
-                    id: generateUniqueTaskId(tasks),
-                    name: "New Task",
-                    start: DateTime.fromFormat(
-                      DateTime.now().toFormat("yyyy-MM-dd"),
-                      "yyyy-MM-dd"
-                    ).toJSDate(),
-                    end: DateTime.fromFormat(
-                      DateTime.now().plus({ days: 1 }).toFormat("yyyy-MM-dd"),
-                      "yyyy-MM-dd"
-                    ).toJSDate(),
-                    progress: 0,
-                    dependencies: "",
-                  },
-                ]);
-              }}
-            >
-              <Text>Add Task</Text>
-            </Button>
-          </FlexItem>
-          <FlexItem justifyItems="end" margin="xx-small">
-            <SimpleSelect
-              renderLabel="View Mode"
-              onChange={(e, { id, value }) => {
-                setViewMode(value);
-              }}
-              value={viewMode}
-            >
-              {Object.entries(viewMode).map(([key, value]) => {
-                return (
-                  <SimpleSelect.Option
-                    id={key}
-                    value={value}
-                    renderBeforeLabel={renderSelectedOptionInSelect}
-                  >
-                    {value}
-                  </SimpleSelect.Option>
-                );
-              })}
-            </SimpleSelect>
-          </FlexItem>
-        </Flex>
-      </FlexItem>
       <FlexItem>
         <View as="div" borderWidth="small" borderRadius="medium">
-          Some content
+          <MindMap />
         </View>
       </FlexItem>
       <FlexItem>
