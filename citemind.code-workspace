@@ -11,7 +11,7 @@
       "titleBar.inactiveBackground": "#311609",
       "titleBar.inactiveForeground": "#ffffff"
     },
-    "workbench.colorTheme": "Dobri Next -C09- Eve",
+    "workbench.colorTheme": "GitHub Dark Default",
     "search.useIgnoreFiles": true
   }
 }
